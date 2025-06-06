@@ -53,5 +53,30 @@ func day1_star1() {
 		totalDiff += diff
 	}
 
-	fmt.Println("total diff", totalDiff)
+	fmt.Println("star1", totalDiff)
+
+	day1_star2(lcol, rcol)
+}
+
+func day1_star2(lcol []int, rcol []int) {
+	var similarityList = []int{}
+	var simScore = 0
+
+	for i := 0; i < len(lcol); i++ {
+		lnum := lcol[i]
+		count := 0
+		for j := 0; j < len(rcol); j++ {
+			if lnum == rcol[j] {
+				count++
+			}
+		}
+		score := lnum * count
+		similarityList = append(similarityList, score)
+	}
+
+	for i := 0; i < len(similarityList); i++ {
+		simScore += similarityList[i]
+	}
+
+	fmt.Println("star 2", simScore)
 }
