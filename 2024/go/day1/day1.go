@@ -1,4 +1,4 @@
-package main
+package day1
 
 import (
 	"bufio"
@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-func day1_star1() {
+func Day1_star1() {
 	var input_file = "./day1_input.txt"
 
 	var lcol = []int{}
