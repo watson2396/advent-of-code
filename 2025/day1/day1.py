@@ -2,6 +2,7 @@
 # left = -
 # right = +
 
+# https://adventofcode.com/2025/day/1
 
 def rotate(transform: str, start: int) -> int:
     dir = transform[0]
